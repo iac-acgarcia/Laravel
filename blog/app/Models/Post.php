@@ -19,7 +19,6 @@ class Post extends Model
     public function tags(){
         return $this->belongsToMany(Tag::class);
     }
-
     //Relación 1:1 polimórfica
     public function image() {
         return $this->morphOne(Image::class,'imageable');
